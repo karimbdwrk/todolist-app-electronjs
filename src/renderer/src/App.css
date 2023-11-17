@@ -1,0 +1,16 @@
+body {
+  background-color: #101010;
+  color: #F7F7F7;
+}
+body nav a,
+body a {
+  font-size: 24px;
+  color: #FFF;
+  margin: 0 10px;
+}
+body #wesh {
+  display: none;
+}
+body #wesh .yo {
+  display: block;
+}

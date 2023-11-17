@@ -14,7 +14,14 @@ function createWindow() {
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
+      sandbox: false,
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", "'unsafe-inline'", 'http://localhost:1337/api'],
+          styleSrc: ["'self'", "'unsafe-inline'", 'http://localhost:1337/api']
+        }
+      }
     }
   })
 
