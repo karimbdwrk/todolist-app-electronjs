@@ -28,7 +28,7 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/editprofile" element={<EditProfilePage />} />
             <Route path="/changepassword" element={<ChangePassword />} />
-            <Route path="/todolist" element={<ToDoList2 />} />
+            <Route path="/todolist/:id" element={<ToDoList2 />} />
           </Routes>
         </Router>
       </AuthProvider>

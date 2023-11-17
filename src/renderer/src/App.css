@@ -1,6 +1,11 @@
 body {
   background-color: #101010;
   color: #F7F7F7;
+  padding: 15px;
+}
+body nav {
+  background-color: #303030;
+  padding: 15px;
 }
 body nav a,
 body a {
@@ -8,9 +13,13 @@ body a {
   color: #FFF;
   margin: 0 10px;
 }
-body #wesh {
-  display: none;
+body .lists {
+  display: flex;
+  padding: 30px 0;
+  gap: 10px;
 }
-body #wesh .yo {
-  display: block;
+body .lists .card {
+  border: 1px solid #E7E7E7;
+  padding: 15px;
+  border-radius: 5px;
 }

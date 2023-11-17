@@ -1,19 +1,29 @@
 body {
-    background-color: #101010;
-    color: #F7F7F7;
+  background-color: #101010;
+  color: #F7F7F7;
+  padding: 15px;
 
-    nav a,
-    a {
-        font-size: 24px;
-        color: #FFF;
-        margin: 0 10px;
+  nav {
+    background-color: #303030;
+    padding: 15px;
+  }
+
+  nav a,
+  a {
+    font-size: 24px;
+    color: #FFF;
+    margin: 0 10px;
+  }
+
+  .lists {
+    display: flex;
+    padding: 30px 0;
+    gap: 10px;
+
+    .card {
+      border: 1px solid #E7E7E7;
+      padding: 15px;
+      border-radius: 5px;
     }
-
-    #wesh {
-        display: none;
-
-        .yo {
-            display: block;
-        }
-    }
+  }
 }
