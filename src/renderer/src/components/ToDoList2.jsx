@@ -14,7 +14,7 @@ import { styles } from '../styles/styles'
 
 const ToDoList2 = () => {
   const [name, setName] = useState('')
-  const [todos, setTodos] = useState(null)
+  const [todolist, setTodolist] = useState(null)
   const [task, setTask] = useState('')
   const [editTask, setEditTask] = useState('')
   const [editIndex, setEditIndex] = useState(-1)
@@ -38,7 +38,7 @@ const ToDoList2 = () => {
         }
       })
       const dataJson = await response.json()
-      setTodos(dataJson.data)
+      setTodolist(dataJson.data)
       setName(dataJson.data.attributes.title)
       setLoading(false)
       console.log(dataJson.data)
@@ -90,7 +90,7 @@ const ToDoList2 = () => {
 
   const handleEditIndex = (id) => {
     setEditIndex(id)
-    const filtre = todos.attributes.todos.data.filter((todo) => todo.id === id)
+    const filtre = todolist.attributes.todos.data.filter((todo) => todo.id === id)
     const taskToEdit = filtre[0].attributes.title
     setEditTask(taskToEdit)
   }
@@ -118,7 +118,7 @@ const ToDoList2 = () => {
   }
 
   const handleImportant = (id) => {
-    const filtre = todos.attributes.todos.data.filter((todo) => todo.id === id)
+    const filtre = todolist.attributes.todos.data.filter((todo) => todo.id === id)
     const bool = filtre[0].attributes.isImportant
     const body = {
       data: {
@@ -144,7 +144,7 @@ const ToDoList2 = () => {
         <p>Loading ...</p>
       ) : (
         <>
-          {todos?.attributes.todos.data.map((todo, id) => (
+          {todolist?.attributes.todos.data.map((todo, id) => (
             <div
               style={todo.attributes.isImportant ? styles.important : styles.notImportant}
               key={id}
